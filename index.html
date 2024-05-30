@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROI Rocket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+        <h1 id="roi">ROI</h1>
+        <h1 id="rocket">Rocket</h1>
+    </div>
+    <p id="p">Launch your investment journey to new heights! ROI Rocket is a powerful calculator that helps you estimate your potential return on investment (ROI) by considering factors like initial investment, monthly contributions, annual interest rate, and investment time horizon. Take control of your financial future and see how your investments can grow!</p>
+    <form id="investment-form">
+      <div class="form-group">
+        <label for="initial-investment">Initial Investment</label>
+        <input type="number" class="form-control" id="initial-investment" >
+      </div>
+      <div class="form-group">
+        <label for="monthly-contribution">Monthly Contribution</label>
+        <input type="number" class="form-control" id="monthly-contribution">
+      </div>
+      <div class="form-group">
+        <label for="annual-interest-rate">Annual Interest Rate (%)</label>
+        <input type="number" class="form-control" id="annual-interest-rate">
+      </div>
+      <div class="form-group">
+        <label for="number-of-years">Investment Time (Years)</label>
+        <input type="number" class="form-control" id="number-of-years">
+      </div>
+      <div class="form-group">
+        <label for="platform-fee">Platform Fee (Optional)</label>
+        <input type="number" class="form-control" id="platform-fee">
+      </div>
+      <button type="submit" class="btn btn-primary">Calculate ROI</button>
+    </form>
+    <div id="result-modal" style="display: none;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Your ROI Results</h5>
+            <button type="button" id="close-result-modal" onclick="closeModal()">Close</button>
+          </div>
+          <div class="modal-body">
+            <p id="your-investment"></p>
+            <p id="final-balance"></p>
+            <p id="total-profit"></p>
+            <p id="platform-fees"></p>
+          </div>
+        </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
